@@ -1,0 +1,23 @@
+diff -up tomahawk-0.8.0/CMakeLists.txt.system_qxt tomahawk-0.8.0/CMakeLists.txt
+--- tomahawk-0.8.0/CMakeLists.txt.system_qxt	2014-11-04 12:39:38.000000000 -0600
++++ tomahawk-0.8.0/CMakeLists.txt	2014-11-05 12:44:11.914890190 -0600
+@@ -356,8 +356,8 @@ endif()
+ endif()
+ 
+ set(QXTWEB_FOUND TRUE)
+-set(QXTWEB_LIBRARIES qxtweb-standalone)
+-set(QXTWEB_INCLUDE_DIRS ${THIRDPARTY_DIR}/qxt/qxtweb-standalone/web ${THIRDPARTY_DIR}/qxt/qxtweb-standalone/network ${THIRDPARTY_DIR}/qxt/qxtweb-standalone/core ${CMAKE_CURRENT_BINARY_DIR})
++set(QXTWEB_LIBRARIES QxtWeb)
++set(QXTWEB_INCLUDE_DIRS /usr/include/QxtCore ${CMAKE_CURRENT_BINARY_DIR})
+ 
+ ### libportfwd
+ set(LIBPORTFWD_INCLUDE_DIR ${THIRDPARTY_DIR}/libportfwd/include)
+diff -up tomahawk-0.8.0/thirdparty/CMakeLists.txt.system_qxt tomahawk-0.8.0/thirdparty/CMakeLists.txt
+--- tomahawk-0.8.0/thirdparty/CMakeLists.txt.system_qxt	2014-11-04 12:39:38.000000000 -0600
++++ tomahawk-0.8.0/thirdparty/CMakeLists.txt	2014-11-05 12:40:17.008297930 -0600
+@@ -1,4 +1,4 @@
+-ADD_SUBDIRECTORY( qxt )
++#ADD_SUBDIRECTORY( qxt )
+ ADD_SUBDIRECTORY( kdsingleapplicationguard )
+ ADD_SUBDIRECTORY( qt-certificate-addon )
+ IF( WITH_CRASHREPORTER )
