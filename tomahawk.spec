@@ -1,7 +1,8 @@
 #
 # Conditional build:
 %bcond_without	crashreporter		# crashreporter support
-%bcond_without	system_qxt		# use system libqxt package
+# requires post recent qxt additions including qxtsslserver
+%bcond_with	system_qxt		# use system libqxt package
 
 %ifarch %{arm} aarch64
 %undefine	with_crashreporter
@@ -47,7 +48,6 @@ BuildRequires:	taglib-devel
 BuildRequires:	telepathy-qt4-devel
 BuildRequires:	websocketpp-devel
 %if %{with system_qxt}
-# requires post recent qxt additions including qxtsslserver
 BuildRequires:	libqxt-devel >= 0.7
 %else
 Provides:	bundled(libqxt) = 0.7
