@@ -41,7 +41,7 @@ BuildRequires:	qca-devel
 BuildRequires:	qjson-devel >= 0.8.1
 BuildRequires:	qtkeychain-devel
 BuildRequires:	qtweetlib-devel >= 0.4
-BuildRequires:	quazip-devel
+BuildRequires:	quazip-qt4-devel
 BuildRequires:	rpmbuild(macros) >= 1.596
 BuildRequires:	sparsehash-devel
 BuildRequires:	taglib-devel
