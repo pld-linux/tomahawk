@@ -92,11 +92,11 @@ Development files for %{name}
 %setup -q -n %{name}-%{version}%{?pre}
 
 %if %{with system_qxt}
-%patch0 -p1
+%patch -P0 -p1
 rm -rv thirdparty/qxt
 %endif
 
-%patch50 -p1
+%patch -P50 -p1
 
 %build
 install -d build
